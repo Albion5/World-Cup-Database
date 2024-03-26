@@ -1,5 +1,5 @@
 #! /bin/bash
-USER=allie
+USER=freecodecamp
 DEFAULT_DB_NAME=postgres
 DB_NAME=$1
 if [[ -z $DB_NAME ]]
