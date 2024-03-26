@@ -36,8 +36,8 @@ cat games.csv | while IFS=',' read YEAR ROUND WINNER OPPONENT WINNER_GOALS OPPON
 do
   if [[ $YEAR != 'year' ]]
   then
-    WINNER_ID=$(insert_team $WINNER)
-    OPPONENT_ID=$(insert_team $OPPONENT)
+    WINNER_ID=$(insert_team "$WINNER")
+    OPPONENT_ID=$(insert_team "$OPPONENT")
     INSERT_GAME_RESULT=$(insert_game $YEAR "$ROUND" $WINNER_ID $OPPONENT_ID $WINNER_GOALS $OPPONENT_GOALS)
     if [[ $INSERT_GAME_RESULT == "INSERT 0 1" ]]
     then
